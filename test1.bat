@@ -1,0 +1,1 @@
+dir *.* /B -> test1.txt
