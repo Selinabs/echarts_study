@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts</title>
+    <script src="echarts.js"></script>
+    <script src="wonderland.js"></script>
+</head>
+<body background="background/timg.jpg" style="color: rgb(76, 150, 255)">
+<div style="width: 1000px;">
+    <div id="main" style="float: left;width: 500px;height: 500px"></div>
+    <div id="test" style="float: left;width: 450px;height: 550px"></div>
+</div>
+<!--<script src="one.js"></script>-->
+<script type="text/javascript">
+    // var echarts = require("echarts");
+    var myChar = echarts.init(document.getElementById("main"), "wonderland");
+    var option={
+        // series:{
+        //     name:"销量",
+        //     type:"pie",
+        //     radius:"55%",
+        //     data:[
+        //         {value:125,name:"上衣"},
+        //         {value:352,name:"裤子"},
+        //         {value:89,name:"袜子"},
+        //         {value:246,name:"帽子"},
+        //         {value:197,name:"鞋子"},
+        //     ]
+        // }
+        title: {
+            text: 'echarts实例'
+        },
+        tooltip: {},
+        legend: {
+            data: ['销量']
+        },
+        xAxis: {
+            data: ["上衣", "帽子", "裤子", "裙子", "袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: "销量",
+            type: "line",
+            data: [20, 50, 30, 80, 37]
+        }]
+    };
+    myChar.setOption(option)
+</script>
+<script type="text/javascript">
+    // var echarts = require("echarts");
+    var myChar = echarts.init(document.getElementById("test"), "wonderland");
+    var option={
+        series:{
+            name:"销量",
+            type:"pie",
+            radius:"55%",
+            data:[
+                {value:125,name:"上衣"},
+                {value:352,name:"裤子"},
+                {value:89,name:"袜子"},
+                {value:246,name:"帽子"},
+                {value:197,name:"鞋子"},
+            ]
+        }
+        // title: {
+        //     text: 'echarts实例'
+        // },
+        // tooltip: {},
+        // legend: {
+        //     data: ['销量']
+        // },
+        // xAxis: {
+        //     data: ["上衣", "帽子", "裤子", "裙子", "袜子"]
+        // },
+        // yAxis: {},
+        // series: [{
+        //     name: "销量",
+        //     type: "line",
+        //     data: [20, 50, 30, 80, 37]
+        // }]
+    };
+    myChar.setOption(option)
+</script>
+
+</body>
+</html>
